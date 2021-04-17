@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <title>honeyuheony.github.io</title>
+</head>
+<!-- 메인페이지입니다. -->
+
+<body>
+    <div class='container'>
+        <div class="page-header">
+            <h1>Wooheon Portfolio <small>honeyuheony.github.io</small></h1>
+        </div>
+        <!-- TAP -->
+        <ul class="nav nav-tabs">
+            <li role="presentation"><a href="index.html">Home</a></li>
+            <li role="presentation"><a href="bucketList.html">Bucket List</a></li>
+            <li role="presentation"><a href="pet.html">Pet</a></li>
+            <li role="presentation" class="active"><a href="note.html">Experience Note</a></li>
+        </ul>
+        <h2>Experienced Skill</h2>
+        <div class="panel panel-default", style="width:600px;">
+            <div class="panel-heading">PYTHON</div>
+            <div class="panel-body">
+                <div class="list-group">
+                    <a data-toggle="modal" href="#selenium" class="list-group-item list-group-item-info">selenium</a>
+                    <a data-toggle="modal" href="#tkinter", class="list-group-item list-group-item-success">tkinter</a>
+                    <a data-toggle="modal" href="#opencv" class="list-group-item list-group-item-warning">opencv</a>
+                    <a data-toggle="modal" href="#pyxl" class="list-group-item list-group-item-danger">pyxl</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="selenium" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">selenium</h5>
+                    </div>
+                    <div class="modal-body">
+                        Selenium은 웹브라우저를 컨트롤해 테스트, 자동화 등을 할 수 있는 도구입니다. <br>
+                        Chrome, edge, IE, Firefox 등 다양한 웹브라우저에서 selenium.webdriver() <br>
+                        모듈을 사용하여 테스트브라우저를 띄우고 각종 행동을 할 수 있습니다.<br><br>
+                        저는 이 모듈을 사용하여 특정 웹페이지에서 반복적인 작업을 해야하는 문제, <br>
+                        크롤링한 데이터를 기반으로 웹브라우저에 직접적인 작업을 해야하는 문제 등을 <br>
+                        해결한 경험이 있습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="tkinter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">tkinter</h5>
+                    </div>
+                    <div class="modal-body">
+                        Tkinter는 python에 기본으로 내장된 UI 패키지입니다.<br>
+                        Tkinter 모듈을 사용해 사용자가 직접 상호작용하는 GUI를 제공할 수 있으며<br>
+                        표, 이미지, 메시지, 스크롤바 등 다양한 위젯을 사용할 수 있습니다.<br><br>
+                        저는 이 모듈을 사용해 제가 만든 간단한 프로그램을 비개발자가 쉽게 사용하도록<br>
+                        GUI를 만들어본 경험이 있습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="opencv" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">opencv</h5>
+                    </div>
+                    <div class="modal-body">
+                        OpenCV는 실시간 컴퓨티비전을 목적으로한 프로그래밍 라이브러리입니다.<br>
+                        Python에서도 사용이 가능하며, opencv를 통해 이미지의 회전, 크기조절, 검출<br>
+                        , 픽셀 rgb연산 등 다양한 이미지처리가 가능합니다. <br><br>
+                        저는 6천장 정도의 스캔본 사진에서 제가 원하는 데이터를 추출해야하는 작업을 <br>
+                        한 경험이 있는데 그때에 OpenCV를 사용하여 이미지를 쉽게 확인할 수 있도록 <br>
+                        경계선을 기반으로 일부분을 추출해 보관하는 작업을 진행한 경험이 있습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="pyxl" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">pyxl</h5>
+                    </div>
+                    <div class="modal-body">
+                        Pyxl은 python으로 excel xlsx파일을 생성, 접근, 수정할 수 있는 모듈입니다.<br><br>
+                        저는 데이터를 정리하는 아르바이트를 해본 경험이 있는데, <br>
+                        그때에 이미 저장된 excel 데이터를 불러와 파이썬으로 작업해 처리하고, <br>
+                        결과데이터를 다시 기본 excel 시트에 추가하는 작업을 진행해본 경험이 있습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
