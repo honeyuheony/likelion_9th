@@ -43,3 +43,50 @@ python manage.py startapp "app이름"
 - views.py에 함수 추가
 - urls.py 에 views import, path추가 (경로, views.함수명, name="welcome") (name은 html에서 호출시 대신 사용할 수 있는 이름)
 
+## 장고와 데이터베이스
+
+데이터베이스를 사용하면 웹을 열때마다 데이터가 보존되어있게 만들 수 있다.
+
+### orm
+
+orm을 통해 파이썬으로 데이터베이스에 직접 제어할 수 있다.
+(sql, 객체지향 개념 알기)
+데이터베이스는 row, column으로 구성된 하나의 표이다.
+python에서는 데이터베이스를 class를 통해 조작한다.
+하나의 클래스 (row)에 각각의 데이터 (column) 
+
+### model
+
+models.py에서는 model 클래스를 상속받은 데이터베이스 클래스를 생성해 각 필드를 생성한다.
+
+![image-20210614185524455](C:\Users\kuhy\AppData\Roaming\Typora\typora-user-images\image-20210614185524455.png)
+
+![image-20210614185559478](C:\Users\kuhy\AppData\Roaming\Typora\typora-user-images\image-20210614185559478.png)
+
+model에서 사용하는 필드 타입과 옵션
+model 클래스에 id 필드가 이미 정의되어있으므로 id는 따로 만들 필요 x
+
+makemigrations : 앱 내의 migration 폴더를 생성해서 models.py의 변경사항 저장
+migrate : Migration 폴더를 실행해 데이터베이스에 적용
+
+admin 페이지를 통해 데이터베이스를 확인할 수 있다.
+
+1. superuser 생성 -> python manage.py createsuperuser
+2. admin.py에  models.class import
+3. admin.site.register(class) 추가
+4. (참고) models class 내에 _str___ 를 추가하면 데이터셋이 저장될 때의 호출을 변경할 수 있다.
+
+
+
+models.py 에 데이터테이블(클래스, 함수) 생성 -> templates(페이지) 생성 -> views.py 함수 지정 -> urls.py path 지정
+
+## CRUD
+
+### CRUD - read
+
+데이터베이스를 읽는 것. html에서 python 문법을 사용해서 데이터를 읽을 수 있다. (wordcount)
+
+Path-converter : 
+세부페이지를 각 데이터베이스마다 하나의 페이지를 만드는 것이 아닌 데이터베이스 id에 따라 다른 페이지를 보일 수 있게 하는 것.
+Primary key : 
+기본 키.ID 값을 말한다.
