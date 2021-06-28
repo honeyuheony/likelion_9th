@@ -135,5 +135,56 @@ urls.py를 각 app별로 관리할 수 있다.
 path('appname/' include ('appname.urls')) -> 주석에 설명적혀있음. 만 추가한다.
 app에 사용되는 path는 모두 잘라낸 후 앱 내에 urls.py를 생성하여 옮긴다. 
 
+## Static
 
+- 정적파일
+  - 미리 서버에 저장되어 있는 파일 
+  - 서버에 저장된 그대로 서비스해주는 파일
+  - static
+    - 개발자가 서버를 개발할 떄 미리 넣어놓은 정적파일(Img, js, css)
+    - 정적 파일들을 static 폴더에서 한번에 관리 가능
+  - media
+    - 사용자가 업로드 할 수 있는 파일
+- 동적파일
+  - 서버의 데이터들이 가공된 다음 보여지는 파일
+  - request 방법에 따라 다른 호출
+
+## media
+
+settings.py -> `MEDIA_ROOT = os.path.join(BASE_DIR, 'media')`media 파일 url설정
+
+project -> urls.py
+
+```python
+from django.conf import settings
+from django.conf.urls.static import static
+
+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+```
+
+models.py -> `image = mod/els.ImageField(upload_to = "blog/", blank = True, null = True)`
+`upload_to`: 업로드할 폴더를 지정
+
+model data 초기화 : blog > migrations > 0001_initial 삭제, blog > migrations > __ pycache __ 삭제 db.sqlit 삭제 (superuser 재설정필요 -> python manage.py createsuperuser)
+
+### python 이미지 모듈 pillow
+
+```python
+pip install pillow
+python manage.py makemigrations
+python manage.py migrate
+```
+
+## Form
+
+html form처럼 장고에서 forms.py를 제작해서 객체지향적 사용 가능.
+is_vaild 메소드를 통한 유효성검사 유용
+
+## User 확장, 인증
+
+auth 토큰을 통한 사용자계정 정보 전송 가능
+
+## Pagination
+
+블로그의 일부를 객체로 잘라서 보내주는 기능
 
