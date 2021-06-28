@@ -90,3 +90,50 @@ Path-converter :
 세부페이지를 각 데이터베이스마다 하나의 페이지를 만드는 것이 아닌 데이터베이스 id에 따라 다른 페이지를 보일 수 있게 하는 것.
 Primary key : 
 기본 키.ID 값을 말한다.
+
+### CRUD - create
+
+GET  : 
+데이터를 얻기 위한 요청
+데이터가 url에 보임
+
+POST :
+데이터를 생성하기 위한 요청
+데이터 url 안보임
+Csrf 공격 방지
+
+create 기능은 페이지를 생성할 new.html, 생성한 페이지를 저장할 create 함수로 이루어짐. 
+
+### CRUD - update
+
+update 기능은 페이지를 수정할 edit.html, 수정한 페이지를 저장할 update 함수로 이루어짐. 
+
+### CRUD - delete
+
+delete 기능은 페이지 id를 받아와 삭제하는 delete 함수 생성으로 이루어짐.
+
+## Template 상속
+
+html 파일에서 중복되는 코드들은 base.html에 저장하고 상속을 통해 사용할 수 있다.
+
+1. 공통으로 사용할 html 부분을 base.html에 저장한 후 내용이 들어갈 부분에
+   {% block content %}
+
+   {% endblock %} 를 작성한다.
+
+2. {% extends 'base.html' %}
+   {% block content %}
+   inner html
+   {% endblock %}
+   로 작성한다.
+
+### urls.py management
+
+urls.py를 각 app별로 관리할 수 있다.
+
+메인 urls.py에는 django.urls.include를 import 한 후 
+path('appname/' include ('appname.urls')) -> 주석에 설명적혀있음. 만 추가한다.
+app에 사용되는 path는 모두 잘라낸 후 앱 내에 urls.py를 생성하여 옮긴다. 
+
+
+
